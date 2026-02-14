@@ -40,24 +40,24 @@
 - `test_successful_registration` — успешная регистрация с валидными данными
 - `test_incorrect_password_error` — проверка ошибки при некорректном пароле
 
-==== test session starts ====
+=== test session starts ===
 platform win32 -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\koles\Desktop\QA_Automation\Sprint_5\venv\Scripts\python.exe
 cachedir: .pytest_cache
 rootdir: C:\Users\koles\Desktop\QA_Automation\Sprint_5
-collected 13 items                                                                                                                                                                                                            
+collected 13 items                                                                                                                                                                                                             
 
-tests/test_constructor.py::test_fillings_tab PASSED [  7%]
-tests/test_constructor.py::test_sauces_tab PASSED [ 15%]
-tests/test_constructor.py::test_buns_tab PASSED [ 23%]
-tests/test_login.py::test_login_from_main_button PASSED [ 30%]
-tests/test_login.py::test_login_from_personal_account PASSED [ 38%]
-tests/test_login.py::test_login_from_register_page PASSED [ 46%]
-tests/test_login.py::test_login_from_forgot_password PASSED [ 53%]
-tests/test_logout.py::test_logout PASSED [ 61%]
-tests/test_navigation.py::test_navigate_to_personal_account PASSED [ 69%]
-tests/test_navigation.py::test_navigate_to_constructor_from_profile PASSED [ 76%]
-tests/test_navigation.py::test_navigate_to_constructor_via_logo PASSED [ 84%]
-tests/test_registration.py::test_successful_registration PASSED [ 92%]
-tests/test_registration.py::test_incorrect_password_error PASSED [100%]
+tests/test_constructor.py::TestConstructor::test_fillings_tab PASSED [  7%]
+tests/test_constructor.py::TestConstructor::test_sauces_tab PASSED [ 15%]
+tests/test_constructor.py::TestConstructor::test_buns_tab PASSED [ 23%]
+tests/test_login.py::TestLogin::test_login_from_main_button PASSED [ 30%]
+tests/test_login.py::TestLogin::test_login_from_personal_account PASSED [ 38%]
+tests/test_login.py::TestLogin::test_login_from_register_page PASSED [ 46%]
+tests/test_login.py::TestLogin::test_login_from_forgot_password [ 53%]
+tests/test_logout.py::TestLogout::test_logout PASSED [ 61%]
+tests/test_navigation.py::TestNavigation::test_navigate_to_personal_account PASSED [ 69%]
+tests/test_navigation.py::TestNavigation::test_navigate_to_constructor_from_profile PASSED [ 76%]
+tests/test_navigation.py::TestNavigation::test_navigate_to_constructor_via_logo PASSED [ 84%]
+tests/test_registration.py::TestRegistration::test_successful_registration PASSED [ 92%]
+tests/test_registration.py::TestRegistration::test_incorrect_password_error PASSED [100%]
 
-=== 13 passed in 96.60s (0:01:36) ===
+=== 13 passed in 100.94s (0:01:40) ===

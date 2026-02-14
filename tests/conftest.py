@@ -18,14 +18,14 @@ def driver():
 
 # Фикстура Генерация уникального логина/email
 @pytest.fixture(scope="function")
-def generate_email():
+def random_email():
     value = randint(1000, 9999)
     email = f'konstantin_45_FQA{value}@yandex.ru'
     return email
 
 #Фикстура Генерация пароля
 @pytest.fixture(scope="function")
-def generate_password():
+def random_password():
     combine = string.ascii_letters + string.digits
     random_string = ''.join(choices(combine, k=7))
     return random_string

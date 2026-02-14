@@ -1,5 +1,4 @@
-from .locators import button_login_main, label_name_register, label_email_register, label_password_register, input_name_register, input_email_register, input_password_register, button_register, link_register, label_email_login, label_password_login, input_email_login, input_password_login, button_login, button_personal_account, button_logout, logo
-from selenium.webdriver.common.by import By
+from .locators import button_login_main, label_name_register, input_name_register, input_email_register, input_password_register, button_register, link_register, label_email_login, input_email_login, input_password_login, button_login, button_personal_account, button_logout, logo
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 

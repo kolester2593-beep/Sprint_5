@@ -1,12 +1,11 @@
 from .locators import logo, button_login_main, link_register, input_name_register, input_email_register, input_password_register, button_register, button_login, error_incorrect_password, button_personal_account, label_email_login, label_name_register, input_email_login, input_password_login, button_logout
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-
-base_url = "https://stellarburgers.education-services.ru/"
+from .urls import BASE_URL
 
 def test_successful_registration(driver, random_email, random_password):
 # 1.Открыть главную страницу
-    driver.get(base_url)
+    driver.get(BASE_URL)
 
 # 2.Дождаться загрузки главной страницы
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
@@ -62,7 +61,7 @@ def test_successful_registration(driver, random_email, random_password):
 
 def test_incorrect_password_error(driver, random_email):
 # 1.Открыть главную страницу
-    driver.get(base_url)
+    driver.get(BASE_URL)
 
 # 2.Дождаться загрузки главной страницы
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))

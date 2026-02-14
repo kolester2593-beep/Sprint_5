@@ -1,12 +1,11 @@
 from .locators import button_login_main, link_register, input_name_register, input_email_register, input_password_register, button_register, input_email_login, input_password_login, button_login, button_personal_account, button_logout, button_constructor, logo, tab_sauces, label_email_login, label_name_register, button_place_order
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-
-base_url = "https://stellarburgers.education-services.ru/"
+from .urls import BASE_URL
 
 def test_navigate_to_personal_account(driver, random_email, random_password):
 # 1.Открыть главную страницу
-    driver.get(base_url)
+    driver.get(BASE_URL)
 
 # 2.Дождаться загрузки главной страницы
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
@@ -63,7 +62,7 @@ def test_navigate_to_personal_account(driver, random_email, random_password):
 
 def test_navigate_to_constructor_from_profile(driver, random_email, random_password):
 # 1.Открыть главную страницу
-    driver.get(base_url)
+    driver.get(BASE_URL)
 
 # 2.Дождаться загрузки главной страницы
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
@@ -126,7 +125,7 @@ def test_navigate_to_constructor_from_profile(driver, random_email, random_passw
 
 def test_navigate_to_constructor_via_logo(driver, random_email, random_password):
 # 1.Открыть главную страницу
-    driver.get(base_url)
+    driver.get(BASE_URL)
 
 # 2.Дождаться загрузки главной страницы
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))

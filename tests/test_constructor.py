@@ -1,11 +1,10 @@
 from .locators import tab_buns, tab_sauces, tab_fillings, logo
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-
-base_url = "https://stellarburgers.education-services.ru/"
+from .urls import BASE_URL
 
 def test_fillings_tab(driver):
-    driver.get(base_url)
+    driver.get(BASE_URL)
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
     driver.find_element(*tab_fillings).click()
     fillings_element = driver.find_element(*tab_fillings)
@@ -14,7 +13,7 @@ def test_fillings_tab(driver):
 
 
 def test_sauces_tab(driver):
-    driver.get(base_url)
+    driver.get(BASE_URL)
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
     driver.find_element(*tab_sauces).click()
     sauces_element = driver.find_element(*tab_sauces)
@@ -22,7 +21,7 @@ def test_sauces_tab(driver):
     assert "tab_tab_type_current" in sauces_classes
 
 def test_buns_tab(driver):
-    driver.get(base_url)
+    driver.get(BASE_URL)
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(logo))
     driver.find_element(*tab_sauces).click() # т.к. тесты должны быть автономны и запускаются по отдельности и булки открыты изначально при загрузке страницы я добавил первый клик на соусы что бы проверка прошла.
     driver.find_element(*tab_buns).click()

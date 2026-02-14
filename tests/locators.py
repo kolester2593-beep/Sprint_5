@@ -8,6 +8,8 @@ button_personal_account = (By.XPATH, "//p[text()='Личный Кабинет']"
 # Кнопка "Войти в аккаунт" на главной странице
 button_login_main = (By.XPATH, "//button[text()='Войти в аккаунт']")
 
+# Кнопка "Оформить заказ" на главной странице
+button_place_order = (By.XPATH, "//button[text()='Оформить заказ']")
 
 # === СТРАНИЦА ВХОДА (Login) ===
 
@@ -59,6 +61,8 @@ button_register = (By.XPATH, "//button[text()='Зарегистрировать�
 # Информация об ошибке "Некорректный пароль"
 error_incorrect_password = (By.XPATH, "//p[text()='Некорректный пароль']")
 
+# Ссылка "Войти" на странице регистрации
+link_login_register = (By.XPATH, "//p[contains(text(), 'Уже зарегистрированы?')]//a[@href='/login' and text()='Войти']")
 
 # === ЛИЧНЫЙ КАБИНЕТ (Profile) ===
 
@@ -96,7 +100,7 @@ input_email_forgot = (By.XPATH, "//label[text()='Email']/following-sibling::inpu
 button_restore = (By.XPATH, "//button[text()='Восстановить']")
 
 # Ссылка "Войти" на странице восстановления
-link_login_forgot = (By.XPATH, "//a[@href='/login' and text()='Войти']")
+link_login_forgot = (By.XPATH, "//p[contains(text(), 'Вспомнили пароль?')]//a[@href='/login' and text()='Войти']")
 
 
 # === СТРАНИЦА СБРОСА ПАРОЛЯ (reset-password) ===
@@ -117,4 +121,4 @@ input_code_reset = (By.XPATH, "//input[@name='name']")
 button_save = (By.XPATH, "//button[text()='Сохранить']")
 
 # Ссылка "Войти" на странице сброса
-link_login_reset = (By.XPATH, "//a[@href='/login' and text()='Войти']")
+link_login_reset = (By.XPATH, "//button[text()='Сохранить']/following-sibling::div//a[@href='/login' and text()='Войти']")

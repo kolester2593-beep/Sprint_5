@@ -23,7 +23,7 @@ input_email_login = (By.XPATH, "//input[@name='name']")
 # Поле ввода пароля на странице входа
 input_password_login = (By.XPATH, "//input[@name='Пароль']")
 
-# Кнопка "Войти" на странице входа (ИСПРАВЛЕНО!)
+# Кнопка "Войти" на странице входа 
 button_login = (By.XPATH, "//button[text()='Войти']")
 
 # Ссылка "Зарегистрироваться" на странице входа
